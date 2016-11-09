@@ -18,10 +18,8 @@ class verificar_sesion{
 					$_SESSION["nombre"] = $retorno[0]["nombre"];
 					$_SESSION["id"] = $retorno[0]["id"];
 
-					setcookie("registrado","si",time()+36000 , '/');
-					setcookie("perfil",$retorno[0]["perfil"],  time()+36000 , '/');
-					setcookie("nombre",$retorno[0]["nombre"],  time()+36000 , '/');
-					setcookie("id",$retorno[0]["id"],  time()+36000 , '/');
+
+					setcookie('sesion', json_encode($_SESSION), time()+3600,'/');
 
 					return "si";
 			}else{

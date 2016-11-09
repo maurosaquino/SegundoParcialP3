@@ -48,6 +48,9 @@ function MostrarPlanilla(){
 		function(exito){
 
 		var t = JSON.parse(exito);
+		var e = JSON.parse(t.divAbm);
+		var c = JSON.parse(e.sesion);
+		console.log(c);
 
 		switch (t.navegacion){
 
@@ -56,7 +59,7 @@ function MostrarPlanilla(){
 			$( "#head").html(t.cabecera);
 			$( "#contenido" ).load('html/pu.php');
 			$( "#nv" ).load('html/ma.php');
-
+$( "#divAbm ").html("Informacion de cookie<br> Registrado: "+c.registrado+" | Perfil: "+c.perfil+" | Nombre: "+c.nombre+" | ID: "+c.id);
 			break;
 
 			case "user":
@@ -64,6 +67,7 @@ function MostrarPlanilla(){
 			$("#head").html(t.cabecera);
 			$( "#contenido" ).load('html/pu.php');
 			$( "#nv" ).load('html/mu.php');
+			$( "#divAbm ").html("Informacion de cookie<br> Registrado: "+c.registrado+" | Perfil: "+c.perfil+" | Nombre: "+c.nombre+" | ID: "+c.id);
 
 			break;
 
@@ -72,7 +76,7 @@ function MostrarPlanilla(){
 			$("#head").html(t.cabecera);
 			$( "#nv" ).load('html/mi.html');
 			$("#contenido").load('html/fcds.php');
-
+			$( "#divAbm ").html("Informacion de cookie<br> Registrado: "+c.registrado+" | Perfil: "+c.perfil+" | Nombre: "+c.nombre+" | ID: "+c.id);
 			break;
 
 			case "nl":

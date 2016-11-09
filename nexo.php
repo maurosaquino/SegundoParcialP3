@@ -25,22 +25,24 @@
 
 				if($_SESSION['registrado']=="si"){
 
+
+
 					if($_SESSION['perfil']=='administrador'){
 
 						$header = "Usuario:".$_SESSION["nombre"]." Perfil:".$_SESSION["perfil"];
-						$array2 = array("cabecera"=>$header,"navegacion"=>'admin');
+						$array2 = array("cabecera"=>$header,"navegacion"=>'admin',"divAbm"=>json_encode($_COOKIE));
 						echo json_encode($array2);
 
 					}elseif($_SESSION['perfil']=='usuario'){
 
 						$header = "Usuario:".$_SESSION["nombre"]." Perfil:".$_SESSION["perfil"];
-						$array2 = array("cabecera"=>$header,"contenido"=>"content","navegacion"=>'user');
+						$array2 = array("cabecera"=>$header,"navegacion"=>'user',"divAbm"=>json_encode($_COOKIE));
 						echo json_encode($array2);
 
 					}else{
 
 						$header = "Usuario:".$_SESSION["nombre"]." Perfil:".$_SESSION["perfil"];
-						$array2 = array("cabecera"=>$header,"navegacion"=>'invi');
+						$array2 = array("cabecera"=>$header,"navegacion"=>'invi',"divAbm"=>json_encode($_COOKIE));
 						echo json_encode($array2);
 
 
