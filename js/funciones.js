@@ -14,7 +14,7 @@ function Login(){
 			
 		}else{
 
-		$("#contenedor").html("El usuario o clave es incorrecto");	
+		$("#contenedor").html("El usuario o clave son incorrectos");	
 
 		}	
 

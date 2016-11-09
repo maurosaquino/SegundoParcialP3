@@ -74,7 +74,7 @@
 					echo '<tr><td class="text-left">'.$usuario[0].'</td>
 						  <td class="text-left">'.$usuario[1].'</td>
 						  <td class="text-left">'.$usuario[3].'</td>
-						  <td class="text-left">'.$usuario[2].'</td>
+						  <td class="text-left"></td>
 					      <td class="text-left"></td></tr>';	
 					}      
 				}

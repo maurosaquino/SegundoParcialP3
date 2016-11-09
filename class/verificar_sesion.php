@@ -6,9 +6,10 @@ class verificar_sesion{
 	
 		require_once('servicios.php');
 
-		$cliente = servicios::generarServicio();
+		$cliente = servicios::generarServicioF();
+
 		$array = array($parametro[0],$parametro[1]);
-		$retorno = servicios::llamarServicio($array,$cliente);
+		$retorno = servicios::llamarServicio('LoginWS',$array,$cliente);
 
 		if(!empty($retorno)){
 
